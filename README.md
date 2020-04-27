@@ -23,16 +23,15 @@ function selectItem ({ items, item }) {
 }
 
 export const itemListView = items => html`
-	<ul>
-		${items.map(item => html`
-			<li @click=${up(selectItem)}
-				class=${classMap({ selected: item.selected })}
-    		>
-				${item.label}
-			</li>
-		`)}
-	</ul>`
-  
+  <ul>
+    ${items.map(item => html`
+      <li @click=${up(selectItem)}
+        class=${classMap({ selected: item.selected })}
+        >
+        ${item.label}
+      </li>
+    `)}
+  </ul>`
 ```
 
 Now, you can use the same view fragment in a dynamic app, with event handling:
