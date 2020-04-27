@@ -45,7 +45,7 @@ import { litImp } from "lit-imp"
 import { model } from "./model"
 import { itemListView } from "./item-list-view"
 
-const bootstrap (up) => litImp({ html, classMap, up })
+const bootstrap = up => litImp({ html, classMap, up })
 const view = ({ model }) => itemListView( model.items )
 
 app({ model, view, render, bootstrap })
