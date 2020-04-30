@@ -1,11 +1,16 @@
 {
   "name": "lit-imp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Build implementation-agnostic `lit` apps and sites",
   "main": "lit-imp.js",
   "module": "lit-imp.js",
   "keywords": [],
   "author": "tstewart@klaudhaus.com",
   "repository": "github:klaudhaus/lit-imp",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@popeindustries/lit-html-server": "^3.1.0",
+    "lit-html": "^1.2.1",
+    "lit-up": "^1.0.0-beta-7"
+  }
 }

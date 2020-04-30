@@ -1,0 +1,25 @@
+dependencies:
+  '@popeindustries/lit-html-server': 3.1.0
+  lit-html: 1.2.1
+  lit-up: 1.0.0-beta-7
+lockfileVersion: 5.1
+packages:
+  /@popeindustries/lit-html-server/3.1.0:
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-OuVxzjN17fIoCGcZFCmF6//rQ86dfevp0703SC2W8S0G257mvjuVBHdRomyVYYFqBjpr9naRz2oFdLjPvCG8bw==
+  /lit-html/1.2.1:
+    dev: false
+    resolution:
+      integrity: sha512-GSJHHXMGLZDzTRq59IUfL9FCdAlGfqNp/dEa7k7aBaaWD+JKaCjsAk9KYm2V12ItonVaYx2dprN66Zdm1AuBTQ==
+  /lit-up/1.0.0-beta-7:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-qg8xUxpwLi8DhM91E+ufDhKzGTW+bjciEmdWXFJnTSWvTrS+UkiHhjmM8lKaM+OIEPlpT2Ac25VWYj1nkn2chw==
+specifiers:
+  '@popeindustries/lit-html-server': ^3.1.0
+  lit-html: ^1.2.1
+  lit-up: ^1.0.0-beta-7
