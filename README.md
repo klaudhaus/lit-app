@@ -67,8 +67,6 @@ const html = renderToString(model(view))
 // Now deploy the static HTML
 ```
 
-For an even higher level of abstraction for website pages and single page apps, see `lit-page`.
-
 
 
 ## Contexts
@@ -91,7 +89,6 @@ import { renderToString, renderToStream, renderToBuffer }
 > Note: Using these ready made contexts is convenient for app development and static site build systems, but more efficient production JavaScript bundles can be made for apps that do not use every standard directive by using `litImp()` directly to assign only the necessary imports.
 >
 > ROADMAP: `lit-imp-scan` to automatically prepare an efficient client or server context based on static analysis of provided view, model and bootstrap functions.
-
 
 
 ## Core API
