@@ -16,9 +16,9 @@ import { until } from "lit-html/directives/until"
 
 import { app as litUpApp } from "lit-up"
 
-import { litImp } from "../lit-imp"
+import { appContext } from "../lit-app"
 
-litImp({
+appContext({
   html, svg, unsafeHTML, unsafeSVG,
   asyncAppend, asyncReplace, cache, classMap, ifDefined,
   guard, live, repeat, styleMap, templateContent, until
@@ -26,7 +26,7 @@ litImp({
 
 export const app = ({ model, view, element, boostrap, logger }) => {
   const wrappedBoostrap = up => {
-    litImp({ up })
+    appContext({ up })
     if (typeof boostrap === "function") return boostrap(up)
   }
 

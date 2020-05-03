@@ -27,7 +27,7 @@
  * @param _until { Function }
  * @param _up { Function }
  */
-export const litImp = ({
+export const appContext = ({
   html: _html,
   svg: _svg,
   asyncAppend: _asyncAppend,
@@ -63,6 +63,8 @@ export const litImp = ({
   up = _up || up
 }
 
+// Mutable references to the functions of `lit-html` or equivalent implementation
+
 export let html
 
 export let svg
@@ -93,4 +95,8 @@ export let unsafeSVG
 
 export let until
 
+// Mutable reference to the `up` function from `lit-up` - defaults to a noop for static rendering
 export let up = () => {}
+
+// A container for environment specific variables
+export const env = {}

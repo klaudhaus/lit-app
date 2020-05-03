@@ -11,11 +11,11 @@ import { styleMap } from "@popeindustries/lit-html-server/directives/style-map"
 import { unsafeHTML } from "@popeindustries/lit-html-server/directives/unsafe-html"
 import { until } from "@popeindustries/lit-html-server/directives/until"
 
-import { litImp } from "../lit-imp"
+import { appContext } from "../lit-app"
 
 export { renderToString, renderToStream, renderToBuffer } from "@popeindustries/lit-html-server"
 
-litImp({
+appContext({
   html, svg, unsafeHTML,
   asyncAppend, asyncReplace, cache, classMap, ifDefined,
   guard, repeat, styleMap, until,
