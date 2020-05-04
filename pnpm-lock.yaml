@@ -1,7 +1,8 @@
 dependencies:
   '@popeindustries/lit-html-server': 3.1.0
   lit-html: 1.2.1
-  lit-up: 1.0.0-beta-7
+  lit-up: 1.0.0-beta-8
+  node-fetch: 2.6.0
 lockfileVersion: 5.1
 packages:
   /@popeindustries/lit-html-server/3.1.0:
@@ -14,12 +15,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GSJHHXMGLZDzTRq59IUfL9FCdAlGfqNp/dEa7k7aBaaWD+JKaCjsAk9KYm2V12ItonVaYx2dprN66Zdm1AuBTQ==
-  /lit-up/1.0.0-beta-7:
+  /lit-up/1.0.0-beta-8:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-qg8xUxpwLi8DhM91E+ufDhKzGTW+bjciEmdWXFJnTSWvTrS+UkiHhjmM8lKaM+OIEPlpT2Ac25VWYj1nkn2chw==
+      integrity: sha512-WXl+zkNQvHwXEqoDiXM8MQyHExCxuysR6Uge/OVbCdFwkvfjEblgXl7PwqF+pJbQDdw2S2LLNF01Klv79fMZdA==
+  /node-fetch/2.6.0:
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    resolution:
+      integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 specifiers:
   '@popeindustries/lit-html-server': ^3.1.0
   lit-html: ^1.2.1
-  lit-up: ^1.0.0-beta-7
+  lit-up: ^1.0.0-beta-8
+  node-fetch: ^2.6.0

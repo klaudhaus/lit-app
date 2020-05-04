@@ -11,14 +11,17 @@ import { styleMap } from "@popeindustries/lit-html-server/directives/style-map"
 import { unsafeHTML } from "@popeindustries/lit-html-server/directives/unsafe-html"
 import { until } from "@popeindustries/lit-html-server/directives/until"
 
+import fetch from "node-fetch"
+
 import { appContext } from "../lit-app"
 
 export { renderToString, renderToStream, renderToBuffer } from "@popeindustries/lit-html-server"
 
 appContext({
-  html, svg, unsafeHTML,
+  html, svg,
   asyncAppend, asyncReplace, cache, classMap, ifDefined,
-  guard, repeat, styleMap, until,
+  fetch,
+  guard, repeat, styleMap, unsafeHTML, until,
   // Stub substitutes for missing directives
   live: x => x,
   templateContent: x => x,

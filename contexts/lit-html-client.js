@@ -19,15 +19,17 @@ import { app as litUpApp } from "lit-up"
 import { appContext } from "../lit-app"
 
 appContext({
-  html, svg, unsafeHTML, unsafeSVG,
-  asyncAppend, asyncReplace, cache, classMap, ifDefined,
-  guard, live, repeat, styleMap, templateContent, until
+  html, svg,
+  asyncAppend, asyncReplace, cache, classMap,
+  fetch: window && window.fetch,
+  ifDefined, guard, live, repeat, styleMap,
+  templateContent, unsafeHTML, unsafeSVG, until
 })
 
-export const app = ({ model, view, element, boostrap, logger }) => {
+export const app = ({ model, view, element, bootstrap, logger }) => {
   const wrappedBoostrap = up => {
     appContext({ up })
-    if (typeof boostrap === "function") return boostrap(up)
+    if (typeof bootstrap === "function") return bootstrap(up)
   }
 
   litUpApp({ model, view, element, bootstrap: wrappedBoostrap, logger, render })

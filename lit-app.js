@@ -17,6 +17,8 @@
  * @param _asyncAppend { Function }
  * @param _asyncReplace { Function }
  * @param _cache { Function }
+ * @param _fetch { Object }
+ * @param _fetch { Function }
  * @param _classMap { Function }
  * @param _ifDefined { Function }
  * @param _guard { Function }
@@ -34,6 +36,8 @@ export const appContext = ({
   asyncReplace: _asyncReplace,
   cache: _cache,
   classMap: _classMap,
+  env: _env,
+  fetch: _fetch,
   ifDefined: _ifDefined,
   guard: _guard,
   live: _live,
@@ -51,6 +55,8 @@ export const appContext = ({
   asyncReplace = _asyncReplace || asyncReplace
   cache = _cache || cache
   classMap = _classMap || classMap
+  Object.assign(env, _env)
+  fetch = _fetch || fetch
   ifDefined = _ifDefined || ifDefined
   guard = _guard || guard
   live = _live || live
@@ -97,6 +103,9 @@ export let until
 
 // Mutable reference to the `up` function from `lit-up` - defaults to a noop for static rendering
 export let up = () => {}
+
+// Mutable reference to the platform-specific `fetch` implementation
+export let fetch
 
 // A container for environment specific variables
 export const env = {}
