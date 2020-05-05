@@ -22,7 +22,7 @@ If you haven't built a `lit` app before, check out [`lit-html`](https://lit-html
 * Install
 
 ```bash
-npm install @klaudhaus/lit-app
+npm install lit-app
 ```
 
 * View components
@@ -31,7 +31,7 @@ In order to create context-agnostic view fragment modules, access all necessary 
 
 ```js
 // item-list-view.js
-import { html, classMap, up } from "@klaudhaus/lit-app"
+import { html, classMap, up } from "lit-app"
 
 function selectItem ({ items, item }) {
   items.forEach(i => i.selected = false)
@@ -55,7 +55,7 @@ Now you can quickly use this view fragment in either a dynamic interactive app o
 * Interative app in browser
 
 ```js
-import { app } from "@klaudhaus/lit-app/contexts/lit-html-client"
+import { app } from "lit-app/contexts/lit-html-client"
 import { itemListView as view } from "./item-list-view"
 
 const model = [{ label: "One "}, { label: "Two" }]
@@ -67,7 +67,7 @@ app({ model, view })
 * Static website page in Node
 
 ```js
-import { renderToString } from "@klaudhaus/lit-app/contexts/lit-html-server"
+import { renderToString } from "lit-app/contexts/lit-html-server"
 import { itemListView as view } from "./item-list-view"
 
 const model = [{ label: "One "}, { label: "Two" }]
@@ -83,12 +83,12 @@ const html = renderToString(model(view))
 In order to speed the preparation of development environments and build systems, two ready-made implementation contexts are delivered within this package and can be imported as follows:
 
 ```js
-import { app } from "@klaudhaus/lit-app/contexts/lit-html-client"
+import { app } from "lit-app/contexts/lit-html-client"
 
 // or
 
 import { renderToString, renderToStream, renderToBuffer } 
-  from "@klaudhaus/lit-app/contexts/lit-html-server"
+  from "lit-app/contexts/lit-html-server"
 ```
 
 `lit-html-client` sets up a context with all the functionality from `lit-html` such as the `html` literal tag and all the standard directives. As a convenience, it also exports a proxy to the `app` function from `lit-up` which automatically adds the appropriate render implementation along with a `boostrap` wrapper that shares the app's `up` function. You can thus bootstrap a fully interctactive application with one call, with the signature:
@@ -133,7 +133,7 @@ Here are some examples of calling `appContext` directly, instead of using ready-
 import { html, render } from "lit-html"
 import { classMap } from "lit-html/directives/classMap"
 import { app } from "lit-up"
-import { appContext } from "@klaudhaus/lit-app"
+import { appContext } from "lit-app"
 
 import { itemListView as view } from "./item-list-view"
 
@@ -149,7 +149,7 @@ Or in a static website:
 ```js
 import { html, renderToString } from "@popeindustries/lit-html-server"
 import { classMap } from "@popeindustries/lit-html-server/directives/classMap"
-import { appContext } from "@klaudhaus/lit-app"
+import { appContext } from "lit-app"
 
 import { itemListView } from "./item-list-view"
 
@@ -180,7 +180,7 @@ NOTE: This is only appropriate if you know that this `lit-app` is bundled (by `r
 The `env` reference can be imported from lit-app, providing a container for environment variables that can be used to deliver different behavior, for example different logging in development and production.
 
 ```js
-import { app, env } from "@klaudhaus/lit-app"
+import { app, env } from "lit-app"
 
 const logger = env.isProd
 	? false
