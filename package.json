@@ -1,5 +1,5 @@
 {
-  "name": "@klaudhaus/lit-app",
+  "name": "lit-app",
   "version": "1.0.0-beta-1",
   "description": "Build implementation-agnostic `lit` apps and sites",
   "main": "lit-app.js",

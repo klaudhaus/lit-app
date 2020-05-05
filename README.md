@@ -97,7 +97,11 @@ import { renderToString, renderToStream, renderToBuffer }
 
 For more details on the parameter keys and default values see [`lit-up`](https://github.com/klaudhaus/lit-up#appoptions).
 
+`lit-html-client` provides a reference to the default browser API for `fetch`.
+
 `lit-html-server` sets up a context based on the implementation from `@popeindustries/lit-html-server`, and conveniently exports the string, stream and buffer rendering methods from its underlying implementation.
+
+`lit-html-server` provides a reference to `node-fetch` implentation.  
 
 > Note: Using these ready made contexts is convenient for app development and static site build systems, but more efficient production JavaScript bundles can be made for apps that do not use every standard directive by using `appContext()` directly to assign only the necessary imports.
 >
@@ -189,7 +193,9 @@ You could also use a dynamic import expression to enable inclusion of whole code
 
 ### `fetch`
 
-This key is intended to proxy the platform-specific `fetch` function, which is very useful in `lit-up` state management functions such as `bootstrap`.  
+This key is intended to proxy the platform-specific `fetch` function, which is very useful in `lit-up` state management functions such as `bootstrap`.
+
+The default contexts set up proxies to platform-appropriate fetch implementations.
 
 ## Application Structure
 
