@@ -118,7 +118,7 @@ If you use the ready-made contexts described above then all of this is set up fo
 
 The `options` object should include the `lit-html` (or equivalent) core functions (`html`, `svg`) and directives (`classMap`, `ifDefined`, `guard` etc.) that may be needed in the app. 
 
-It can also include a reference to a `lit-up` app's `up` function (typically obtained as a parameter to the  `bootstrap` handler) which allows view fragments to access `up` via a simple import without coupling them to a specific app or needing to pass it through the entire view hierarchy. 
+It can also include a reference to a `lit-up` app's `up` function (typically obtained as an argument to the  `bootstrap` handler) which allows view fragments to access `up` via a simple import without coupling them to a specific app or needing to pass it through the entire view hierarchy. 
 
 It can also include an `env` object whose keys will be available to view fragments for conditional branching based on environment variables.
 
@@ -139,7 +139,7 @@ import { itemListView as view } from "./item-list-view"
 
 const model = [{ label: "One "}, { label: "Two" }]
 
-const bootstrap = up => appContext({ html, classMap, up })
+const bootstrap = ({ up }) => appContext({ html, classMap, up })
 
 app({ model, view, render, bootstrap })
 ```
