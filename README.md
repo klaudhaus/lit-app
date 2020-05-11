@@ -91,7 +91,7 @@ import { renderToString, renderToStream, renderToBuffer }
   from "lit-app/contexts/lit-html-server"
 ```
 
-`lit-html-client` sets up a context with all the functionality from `lit-html` such as the `html` literal tag and all the standard directives. As a convenience, it also exports a proxy to the `app` function from `lit-up` which automatically adds the appropriate render implementation along with a `boostrap` wrapper that shares the app's `up` function. You can thus bootstrap a fully interctactive application with one call, with the signature:
+`lit-html-client` sets up a context with all the functionality from `lit-html` such as the `html` literal tag and all the standard directives. As a convenience, it also exports a proxy to the `app` function from `lit-up` which automatically adds the appropriate render implementation along with a `bootstrap` wrapper that shares the app's `up` function. You can thus bootstrap a fully interctactive application with one call, with the signature:
 
 ``app({ model, view, bootstrap, logger, element })``
 

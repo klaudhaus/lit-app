@@ -27,10 +27,10 @@ appContext({
 })
 
 export const app = ({ model, view, element, bootstrap, logger }) => {
-  const wrappedBoostrap = (args) => {
+  const wrappedBootstrap = (args) => {
     appContext({ up: args.up })
     if (typeof bootstrap === "function") return bootstrap(args)
   }
 
-  litUpApp({ model, view, element, bootstrap: wrappedBoostrap, logger, render })
+  litUpApp({ model, view, element, bootstrap: wrappedBootstrap, logger, render })
 }
