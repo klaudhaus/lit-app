@@ -17,6 +17,7 @@
  * @param _asyncAppend { Function }
  * @param _asyncReplace { Function }
  * @param _cache { Function }
+ * @param _env { Object }
  * @param _fetch { Object }
  * @param _fetch { Function }
  * @param _classMap { Function }
@@ -30,43 +31,43 @@
  * @param _up { Function }
  */
 export const appContext = ({
-  html: _html,
-  svg: _svg,
-  asyncAppend: _asyncAppend,
-  asyncReplace: _asyncReplace,
-  cache: _cache,
-  classMap: _classMap,
-  env: _env,
-  fetch: _fetch,
-  ifDefined: _ifDefined,
-  guard: _guard,
-  live: _live,
-  repeat: _repeat,
-  styleMap: _styleMap,
-  templateContent: _templateContent,
-  unsafeHTML: _unsafeHTML,
-  unsafeSVG: _unsafeSVG,
-  until: _until,
-  up: _up
+  html: _html = html,
+  svg: _svg = svg,
+  asyncAppend: _asyncAppend = asyncAppend,
+  asyncReplace: _asyncReplace = asyncReplace,
+  cache: _cache = cache,
+  classMap: _classMap = classMap,
+  env: _env = {},
+  fetch: _fetch = fetch,
+  ifDefined: _ifDefined = ifDefined,
+  guard: _guard = guard,
+  live: _live = live,
+  repeat: _repeat = repeat,
+  styleMap: _styleMap = styleMap,
+  templateContent: _templateContent = templateContent,
+  unsafeHTML: _unsafeHTML = unsafeHTML,
+  unsafeSVG: _unsafeSVG = unsafeSVG,
+  until: _until = until,
+  up: _up = up
 }) => {
-  html = _html || html
-  svg = _svg || svg
-  asyncAppend = _asyncAppend || asyncAppend
-  asyncReplace = _asyncReplace || asyncReplace
-  cache = _cache || cache
-  classMap = _classMap || classMap
+  html = _html
+  svg = _svg
+  asyncAppend = _asyncAppend
+  asyncReplace = _asyncReplace
+  cache = _cache
+  classMap = _classMap
   Object.assign(env, _env)
-  fetch = _fetch || fetch
-  ifDefined = _ifDefined || ifDefined
-  guard = _guard || guard
-  live = _live || live
-  repeat = _repeat || repeat
-  styleMap = _styleMap || styleMap
-  templateContent = _templateContent || templateContent
-  unsafeHTML = _unsafeHTML || unsafeHTML
-  unsafeSVG = _unsafeSVG || unsafeSVG
-  until = _until || until
-  up = _up || up
+  fetch = _fetch
+  ifDefined = _ifDefined
+  guard = _guard
+  live = _live
+  repeat = _repeat
+  styleMap = _styleMap
+  templateContent = _templateContent
+  unsafeHTML = _unsafeHTML
+  unsafeSVG = _unsafeSVG
+  until = _until
+  up = _up
 }
 
 // Mutable references to the functions of `lit-html` or equivalent implementation
