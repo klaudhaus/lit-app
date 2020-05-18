@@ -32,5 +32,5 @@ export const app = ({ model, view, element, bootstrap, logger }) => {
     if (typeof bootstrap === "function") return bootstrap(args)
   }
 
-  litUpApp({ model, view, element, bootstrap: wrappedBootstrap, logger, render })
+  return litUpApp({ model, view, element, bootstrap: wrappedBootstrap, logger, render })
 }
