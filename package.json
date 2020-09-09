@@ -1,6 +1,6 @@
 {
   "name": "lit-app",
-  "version": "1.0.0-beta-6",
+  "version": "1.0.0-beta-7",
   "description": "Build implementation-agnostic `lit` apps and sites",
   "main": "lit-app.js",
   "module": "lit-app.js",
