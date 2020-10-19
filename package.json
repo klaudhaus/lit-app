@@ -11,7 +11,7 @@
   "dependencies": {
     "@popeindustries/lit-html-server": "^3.1.0",
     "lit-html": "^1.2.1",
-    "lit-up": "^1.0.0-beta-11",
+    "lit-up": "^1.0.1",
     "node-fetch": "^2.6.0"
   }
 }
