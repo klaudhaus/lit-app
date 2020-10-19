@@ -5,7 +5,9 @@ export {
   svg
 } from "lit-html"
 
-import { Update } from "lit-up"
+import { Up } from "lit-up"
+
+export { Update, UpdateResult, View, ViewResult } from "lit-up"
 
 export { asyncAppend } from "lit-html/directives/async-append"
 export { asyncReplace } from "lit-html/directives/async-replace"
@@ -21,7 +23,6 @@ export { unsafeHTML } from "lit-html/directives/unsafe-html"
 export { unsafeSVG } from "lit-html/directives/unsafe-svg"
 export { until } from "lit-html/directives/until"
 
-type UpOptions = { propagate?: boolean, doDefault?: boolean }
-export function up<T> (handler: Update<T>, data?: T, options?: UpOptions): (e?: Event) => unknown
+export const up: Up<any>
 
 export function fetch (input: RequestInfo, init?: RequestInit) : Promise<Response>
