@@ -22,6 +22,6 @@ export { unsafeSVG } from "lit-html/directives/unsafe-svg"
 export { until } from "lit-html/directives/until"
 
 type UpOptions = { propagate?: boolean, doDefault?: boolean }
-export function up<T> (handler: Update<T>, data?: T, options?: UpOptions): unknown
+export function up<T> (handler: Update<T>, data?: T, options?: UpOptions): (e: Event) => unknown
 
 export function fetch (input: RequestInfo, init?: RequestInit) : Promise<Response>
