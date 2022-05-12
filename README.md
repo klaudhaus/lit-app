@@ -2,6 +2,10 @@
 
 > Build web apps the _light_ way
 
+## Deprecation Notice
+
+This package is no longer maintained. Development has been refocussed on [MetaliQ](https://github.com/metaliq/metaliq). If you are aiming to build a front end application with `lit`, MetaliQ inherits a similar state management approach to `lit-app` while adding a range of other capabilities. 
+
 ## Features
 
 * [`lit-html`](https://lit-html.polymer-project.org/) templates - real HTML, real JS
